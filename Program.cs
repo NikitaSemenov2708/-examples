@@ -456,7 +456,7 @@ while (index<10)
 } */
 
 
-/* int[] A = new int[10];
+ int[] A = new int[10];
 int index=0;
 while (index<10)
 {
@@ -469,7 +469,7 @@ while (index<10)
      Console.WriteLine(A[index]);
      index++;
 } 
-Console.WriteLine(); */
+Console.WriteLine(); 
 //1 нарушают порядок возрастания
 /* index= 1;
 int temp= A[0];
@@ -494,4 +494,28 @@ while (index<10)
     } 
 index++;
 } */
-// больше среднего арифметического А не совсем понятно
+// больше среднего арифметического А 
+/* int sum=A[0];
+index=1;
+while (index<10)
+{
+    sum=sum+A[index];
+    Console.WriteLine(sum);
+    ;
+    
+index++;
+} 
+Console.WriteLine();
+Console.WriteLine(sum);
+Console.WriteLine();
+Console.WriteLine(sum/10);
+Console.WriteLine();
+index=0;
+while (index<10)
+{   
+    if (A[index]<sum/10)
+    {
+        Console.WriteLine(A[index]);
+    }
+ index++;   
+} */
