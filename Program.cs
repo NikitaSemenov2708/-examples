@@ -289,11 +289,12 @@ while (count< N)
  }
  met(9, 3); */
 
- //Найти третью цифру числа или сообщить, что её нет? // подходит для 3 значных цифр.
+ /* //Найти третью цифру числа или сообщить, что её нет? // подходит для 3 значных цифр.
 
-/*  void met (double a)
+  void met (double a)
  {
-     if ((a/100)<1)
+     
+     if ((a/100)<2)
      {
          Console.WriteLine("Третьей цифры нет");
      }
@@ -456,7 +457,7 @@ while (index<10)
 } */
 
 
- int[] A = new int[10];
+ /* int[] A = new int[10];
 int index=0;
 while (index<10)
 {
@@ -469,7 +470,7 @@ while (index<10)
      Console.WriteLine(A[index]);
      index++;
 } 
-Console.WriteLine(); 
+Console.WriteLine();  */
 //1 нарушают порядок возрастания
 /* index= 1;
 int temp= A[0];
@@ -519,3 +520,123 @@ while (index<10)
     }
  index++;   
 } */
+
+
+//Найти третью цифру числа или сообщить, что её нет? // подходит для 3 значных цифр.
+
+/*   void met (int a)
+ {
+     int index = 0;
+     int b= a;
+     while (index<2&& a>=10)
+     {
+         a=a/10;
+          
+          index++;
+     }
+    Console.WriteLine(index);
+
+
+      if ((b/100)<1)
+     {
+         Console.WriteLine("Третьей цифры нет");
+     }
+
+    /* if ((a/100)>1)
+     {
+         a= a % 10;
+         Console.WriteLine(a);
+     } */
+
+   /* if ((b/100)>=1)
+     {
+         Console.WriteLine(b % (Math.Pow(10, index-1)));
+     }
+
+
+ }
+ met(2128); */ 
+
+/*  Почувствуй себя джуном
+15. Дано число. Проверить кратно ли оно 7 и 23
+16. Дано число обозначающее день недели. Выяснить является номер недели выходным днём
+17. По двум заданным числам проверять является ли одно квадратом другого
+18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
+19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
+20. Ввести номер четверти, показать диапазоны для возможных координат
+21. Программа проверяет пятизначное число на палиндромом.
+22. Найти расстояние между точками в пространстве 2D/3D */
+
+/* Дано число. Проверить кратно ли оно 7 и 23 */
+
+/* string sum( int a, int b, int c)
+{
+   string res = "ДА делится";
+   if (c % a == 0 && c % b ==0 )
+   {
+       return res;
+   }
+   else
+   {
+       res= "НЕ делится";
+       return res;
+   }
+
+}
+string number = sum(7,23, 162);
+Console.WriteLine(number); */
+
+
+//Дано число обозначающее день недели. Выяснить является номер недели выходным днём
+
+/* Console.WriteLine("Введите число: ");
+int a = int.Parse(Console.ReadLine());
+
+string met (int a)
+{
+    string res = "Выходной";
+  if (a==6 | a==7)
+  {
+      return res;
+  }
+  if (a>=1 && a<=5)
+  {
+      res="Рабочий";
+      return res;
+  }
+  else
+  {
+     res= "Не верно указан день";
+     return res;
+  }
+  
+}
+string day = met(a);
+Console.WriteLine(day); */
+
+
+//По двум заданным числам проверять является ли одно квадратом другого
+
+/* string a ( int one, int two)
+
+{ 
+    string res = string.Empty;
+
+    if (one==Math.Sqrt(two))
+    {
+        res= "Число two явлеется квадратом one";
+        return res;
+    }
+    if (two==Math.Sqrt(one))
+    {
+        res= "Число one явлеется квадратом two";
+        return res;
+    }
+    else
+    {
+        res= "Не являются";
+        return res;
+    }
+}
+string number= a(2, 4);
+Console.WriteLine(number); */
