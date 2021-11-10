@@ -640,3 +640,36 @@ Console.WriteLine(day); */
 }
 string number= a(2, 4);
 Console.WriteLine(number); */
+
+/* Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y */
+
+bool a (bool x, bool y)
+{
+  bool res = true;
+  if (!(x|y) == (!(x))&&(!(y)))
+  {   
+      return res;
+  }
+    else
+    {
+       res= false;
+       return res;
+    }
+
+}
+
+bool var = a(true, true); 
+Console.WriteLine(var);
+Console.WriteLine();
+
+var = a(false, true); 
+Console.WriteLine(var);
+Console.WriteLine();
+
+var = a(true, false); 
+Console.WriteLine(var);
+Console.WriteLine();
+
+var = a(false, false); 
+Console.WriteLine(var);
+
