@@ -643,10 +643,10 @@ Console.WriteLine(number); */
 
 /* Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y */
 
-bool a (bool x, bool y)
+/* bool a (bool x, bool y)
 {
   bool res = true;
-  if (!(x|y) == (!(x))&&(!(y)))
+  if (!(x|y) == (!x && !y))
   {   
       return res;
   }
@@ -672,4 +672,111 @@ Console.WriteLine();
 
 var = a(false, false); 
 Console.WriteLine(var);
+ */
 
+
+//Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
+
+/* int a(int x, int y)
+{
+  int res=0;
+  if (x>0 && y>0)
+  {   
+      res=1;
+      return res;
+  }
+  if (x<0 && y>0)
+  {   
+      res=2;
+      return res;
+  }
+    if (x<0 && y<0)
+  {   
+      res=3;
+      return res;
+  }
+  else
+  {
+      res=4;
+      return res;
+  }
+
+}
+int qvadro= a(-100, 200);
+Console.WriteLine($"Определен номер четверти= {qvadro}"); */
+
+//Ввести номер четверти, показать диапазоны для возможных координат
+
+/* string a (int number)
+{
+  string res=string.Empty;
+    if (number==1)
+    {
+        res="Данная четверть принимает значения x (0....100], y (0....100] ";
+        return res;
+    }
+    if (number==2)
+    {
+        res="Данная четверть принимает значения x [-100....0), y (0....100] ";
+        return res;
+    }
+    if (number==3)
+    {
+        res="Данная четверть принимает значения x [-100....0), y (-100....0] ";
+        return res;
+    }
+    if (number==4)
+    {
+        res="Данная четверть принимает значения x (0....100], y (-100....0] ";
+        return res;
+    }
+    else
+    {
+        res="Неправильно введен номер четверти";
+        return res;
+    }
+}
+
+string num= a(1);
+Console.WriteLine(num); */
+
+////Программа проверяет пятизначное число на палиндромом
+
+/* string a (int number)
+{
+    string res= string.Empty;
+    if (number>=10000&&number<=99999)
+    {
+        if ((number/10000==number%10)&& (number/1000%10==number%100/10))
+        {
+            res= "Число является палиндромом";
+            return res;
+        }
+        else
+        {
+            res= "Число НЕ является палиндромом";
+            return res;
+        }
+       
+    }
+    else
+    {
+        res= "Число НЕ пятизначное";
+        return res;
+    }
+}
+
+string pal= a(11311);
+Console.WriteLine(pal); */
+
+
+//Найти расстояние между точками в пространстве 2D/3D
+/* 
+double a (double x1, double x2, double y1, double y2, double z1, double z2)
+{
+    double distance=0;
+    distance= Math.Pow((Math.Pow((x2-x1),2)+ Math.Pow((y2-y1),2)+Math.Pow((z2-z1),2)), (1.0/3.0));
+    return distance;
+}
+double result = a(1, 4, 1, 4, 1, 4);
+Console.WriteLine(result); */
