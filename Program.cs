@@ -171,7 +171,7 @@ else
 }
 met(4); */
 
- //Показать числа от -N до N
+//Показать числа от -N до N
 
 /* void met (int N)
 {
@@ -221,15 +221,15 @@ while (count< N)
     }
 } */
 
- //Показать последнюю цифру трёхзначного числа
+//Показать последнюю цифру трёхзначного числа
 
- /* void met (int a)
- {
-    a= a % 10;
-    Console.WriteLine(a);
- }
- met(125); */
- 
+/* void met (int a)
+{
+   a= a % 10;
+   Console.WriteLine(a);
+}
+met(125); */
+
 //Показать вторую цифру трёхзначного числа
 
 /* void met (int a)
@@ -266,45 +266,45 @@ while (count< N)
  }
  met(327); */
 
- /* void met (int a)
- {
-    a= (a/100)*10 + ((a%100)%10);
-    Console.WriteLine(a);
- }
- met(679); */
+/* void met (int a)
+{
+   a= (a/100)*10 + ((a%100)%10);
+   Console.WriteLine(a);
+}
+met(679); */
 
- // Выяснить, кратно ли число заданному, если нет, вывести остаток.
+// Выяснить, кратно ли число заданному, если нет, вывести остаток.
 
- /* void met (int a, int b)
- {
-    if (a%b==0)
+/* void met (int a, int b)
+{
+   if (a%b==0)
+   {
+       Console.WriteLine("Кратно");
+   }
+   else
+   {
+       Console.WriteLine($"Остаток = {a%b} ");
+   }
+
+}
+met(9, 3); */
+
+/* //Найти третью цифру числа или сообщить, что её нет? // подходит для 3 значных цифр.
+
+ void met (double a)
+{
+
+    if ((a/100)<2)
     {
-        Console.WriteLine("Кратно");
+        Console.WriteLine("Третьей цифры нет");
     }
-    else
+   if ((a/100)>1)
     {
-        Console.WriteLine($"Остаток = {a%b} ");
+        a= a % 10;
+        Console.WriteLine(a);
     }
-    
- }
- met(9, 3); */
-
- /* //Найти третью цифру числа или сообщить, что её нет? // подходит для 3 значных цифр.
-
-  void met (double a)
- {
-     
-     if ((a/100)<2)
-     {
-         Console.WriteLine("Третьей цифры нет");
-     }
-    if ((a/100)>1)
-     {
-         a= a % 10;
-         Console.WriteLine(a);
-     }
- }
- met(99); */
+}
+met(99); */
 
 /* double met (string b, double c)
 {
@@ -416,13 +416,13 @@ FillArray(array);
 PrintArray(array);
  */
 
- //Задача 
- //сформировать случайным образом целочисленный массив А
- //из натуральных двухзначных чисел
- // создать на его основе массив В отбрасывая те, которые,
- //1 нарушают порядок возрастания
- //2 больше среднего арифметического А
- //3 четные
+//Задача 
+//сформировать случайным образом целочисленный массив А
+//из натуральных двухзначных чисел
+// создать на его основе массив В отбрасывая те, которые,
+//1 нарушают порядок возрастания
+//2 больше среднего арифметического А
+//3 четные
 
 /* int[] A = new int[10];
 int index=0;
@@ -457,18 +457,18 @@ while (index<10)
 } */
 
 
- /* int[] A = new int[10];
+/* int[] A = new int[10];
 int index=0;
 while (index<10)
 {
-     A[index]= new Random().Next(10, 99);
-     index++;
+    A[index]= new Random().Next(10, 99);
+    index++;
 }
 index= 0;
 while (index<10)
 {
-     Console.WriteLine(A[index]);
-     index++;
+    Console.WriteLine(A[index]);
+    index++;
 } 
 Console.WriteLine();  */
 //1 нарушают порядок возрастания
@@ -548,14 +548,14 @@ while (index<10)
          Console.WriteLine(a);
      } */
 
-   /* if ((b/100)>=1)
-     {
-         Console.WriteLine(b % (Math.Pow(10, index-1)));
-     }
+/* if ((b/100)>=1)
+  {
+      Console.WriteLine(b % (Math.Pow(10, index-1)));
+  }
 
 
- }
- met(2128); */ 
+}
+met(2128); */
 
 /*  Почувствуй себя джуном
 15. Дано число. Проверить кратно ли оно 7 и 23
@@ -780,3 +780,176 @@ double a (double x1, double x2, double y1, double y2, double z1, double z2)
 }
 double result = a(1, 4, 1, 4, 1, 4);
 Console.WriteLine(result); */
+
+/* Почувствуй себя мидлом
+23. Показать таблицу квадратов чисел от 1 до N 
+24. Найти кубы чисел от 1 до N
+25. Найти сумму чисел от 1 до А
+26. Возведите число А в натуральную степень B используя цикл
+27. Определить количество цифр в числе
+28. Подсчитать сумму цифр в числе
+29. Написать программу вычисления произведения чисел от 1 до N
+30. Показать кубы чисел, заканчивающихся на четную цифр */
+
+
+//Показать таблицу квадратов чисел от 1 до N 
+
+/* void a(int N)
+{
+    int count=1;
+    while (count<=N)
+    {   
+        Console.WriteLine(count*count);
+        count++;
+    }
+
+}
+a(10); */
+
+//Показать числа от -N до N
+/* string met(int arg) 
+{
+    var res= "";
+    for (int i = -arg; i <= arg; i++)
+    {
+        res+=i+" "; /// res+ будет возвращать каждое число в данном цикле
+    }
+    return res;
+}
+Console.WriteLine(met(4)); */
+
+//Показать таблицу квадратов чисел от 1 до N 
+
+/* string met(int arg)
+{
+    var res = " ";
+    for (int i = 1; i <= arg; i++)
+    {
+        res += i * i + " ";//res+ будет возвращать каждое число в данном цикле, +" " для разделения чисел , тип данных var можно использовать как для int так и для string
+    }
+    return res;
+}
+Console.WriteLine(met(5)); */
+
+//Найти кубы чисел от 1 до N
+
+/* string met(int arg)
+{
+    var res = " ";
+    for (int i = 1; i <= arg; i++)
+    {
+        res += i * i * i + " ";//res+ будет возвращать каждое число в данном цикле, +" " для разделения чисел , тип данных var можно использовать как для int так и для string
+    }
+    return res;
+}
+Console.WriteLine(met(5)); */
+
+//Найти сумму чисел от 1 до А
+/* int met(int arg)
+{
+    var res = 0;
+    for (int i = 1; i <= arg; i++)
+    {
+        res = i + res;
+    }
+    return res;
+}
+Console.WriteLine(met(6)); */
+
+//Возведите число А в натуральную степень B используя цикл
+
+/* double met (double a, double b)
+{
+    double res=0;
+    while (a!=0)
+    {
+        res= Math.Pow(a,b);
+        break;
+    }
+    return res;
+    
+}
+double quadro = met(4, 2);
+Console.WriteLine(quadro); */
+
+//Определить количество цифр в числе
+
+ /* int met (int a)
+ {
+     int count=1;
+     int b =a;
+     while (a/10>0)
+     {     
+      a=a/10;
+        
+       count++; 
+     }
+     while (b<10)
+     {     
+       count=1;
+        break;
+       
+     }
+return count;
+}
+ int number=met(94564465);
+ Console.WriteLine(number); */
+
+//Определить количество уникальных цифр в числе (додумать)
+
+
+ //Подсчитать сумму цифр в числе
+/* int met (int a)
+ {
+     int b =a;
+     int c=a%10;
+     while (a/10>0)
+     { 
+      a=a/10;
+      b = a % 10; 
+      c=c+b;
+     }
+     
+return c;
+}
+ int number=met(123456);
+ Console.WriteLine(number); */
+
+ //Написать программу вычисления произведения чисел от 1 до N
+
+ /* int met (int N)
+ {  int res=1;
+    int num=1;
+     while (num<=N)
+     {
+          res= res*(num);
+          Console.WriteLine(res);
+          num++;
+     }
+ return res;
+ }
+ Console.WriteLine(met(5)); */
+
+
+ //Показать кубы чисел, заканчивающихся на четную цифр
+
+ /* string met (int a)
+{
+    int res= 1;
+    var num =0;
+    string three = " ";
+    
+    for (num = 0; num <= a; num++)
+    {
+        res = num*num*num;
+        if (res%2==0 && res!=0)
+        {
+            three+= ($"{res}  ");
+        }
+        
+    }
+
+return three;
+}
+Console.WriteLine(met(11)); */
+
