@@ -953,3 +953,762 @@ return three;
 }
 Console.WriteLine(met(11)); */
 
+//Почувствуй себя сеньором
+/* 31. Задать массив из 8 элементов и вывести их на экран 
+32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
+33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
+34. Написать программу замену элементов массива на противоположные
+35. Определить, присутствует ли в заданном массиве, некоторое число 
+36. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
+37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
+38. Найти сумму чисел одномерного массива стоящих на нечетной позиции
+39. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом */
+
+//Задать массив из 8 элементов и вывести их на экран 
+
+/* void FillArray(int[] mass)
+{   
+    int index =0;
+    int length= mass.Length;
+    while (index<length)
+    {
+     mass[index]= new Random().Next(1, 10);
+     index++;
+    }
+}
+
+void PrintArray(int[] mas)
+{
+    int count=0;
+    int size= mas.Length;
+    while (count<size)
+    {   
+        Console.WriteLine(mas[count]);
+         count++;
+    }
+}
+
+int[] array = new int[8];
+FillArray(array);
+PrintArray(array); */
+
+//Задать массив из 8 элементов и вывести их на экран 
+
+/* int getRandom ()
+{
+
+    return new Random().Next(1, 10);
+}
+
+int[] N= new int[8];
+int index=0;
+while (index<8)
+{
+     N[index]=getRandom();
+     index++;
+}
+
+index=0;
+
+while (index<8)
+{
+Console.WriteLine(N[index]);
+index++;
+} */
+
+//32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
+
+/* int getRandom ()
+{
+
+    return new Random().Next(0, 2);
+}
+
+int[] N= new int[8];
+int index=0;
+while (index<8)
+{
+     N[index]=getRandom();
+     index++;
+}
+
+index=0;
+
+while (index<8)
+{
+Console.WriteLine(N[index]);
+index++;
+} */
+
+
+//Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
+
+/* int getRandom()
+{
+    return new Random().Next(-10,10);
+}
+int[] N = new int [12];
+int index=0;
+while (index<12)
+{
+     N[index]=getRandom();
+     index++;
+}
+index=0;
+
+while (index<12)
+{
+    Console.WriteLine(N[index]);
+    index++;
+}
+
+index=0;
+var res=0;
+while (index<12)
+    { if (N[index]>0)
+        {
+        res= res+N[index];
+        }
+         index++;    
+    }
+Console.WriteLine();    
+Console.WriteLine(res);
+
+ */
+
+//Написать программу замену элементов массива на противоположные
+/*  int getRandom()
+ {
+     return new Random().Next(-10,10);
+    
+ }
+int[] N = new int [10];
+int index=0;
+while (index<10)
+{
+     N[index]=getRandom();
+     index++;
+}
+index=0;
+int res=0;
+while (index<10)
+{
+     res=N[index]*(-1);
+     Console.WriteLine(res);
+     index++;
+} */
+
+//Определить, присутствует ли в заданном массиве, некоторое число 
+
+/* int getRandom()
+{
+    return new Random().Next(1,10);
+}
+int[] array=new int[10];
+int index=0;
+int number=5;
+while (index<10)
+{
+     array[index]=getRandom();
+    index++; 
+}
+index=0;
+
+while (index<10)
+{
+     Console.WriteLine(array[index]);
+     index++;
+     
+}
+Console.WriteLine();
+index=0;
+
+while (index<10)
+{
+    if (array[index]==number)
+    {
+        Console.WriteLine($"{array[index]} Присутствует");
+    }
+    if (array[index]!=number)
+    {
+        Console.WriteLine($"{array[index]} НЕ Присутствует");
+    }
+    
+ index++;
+} */
+
+//Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
+/* int getRandom()
+{
+    return new Random().Next(100,1000);
+}
+int[] array=new int[10];
+int index=0;
+int count=0;
+while (index<10)
+{
+     array[index]=getRandom();
+    index++; 
+}
+index=0;
+
+while (index<10)
+{
+     Console.WriteLine(array[index]);
+     index++; 
+}
+index=0;
+Console.WriteLine();
+while (index<10)
+{   
+    if (array[index]%2==0)
+    {
+        count++;
+    }
+     
+     index++; 
+}
+Console.WriteLine(count); */
+
+//В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
+
+/* int getRandom()
+{
+    return new Random().Next(1,1000);
+}
+int[] array=new int[123];
+int index=0;
+int count=0;
+while (index<123)
+{
+     array[index]=getRandom();
+    index++; 
+}
+index=0;
+
+while (index<123)
+{ 
+    if (array[index]>=10 && array[index]<=99)
+    {
+        count++;
+        Console.WriteLine($"Найдено число из заданного отрезка {array[index]}, кол-во чисел = {count} ");
+    }
+ index++; 
+} */
+/* index=0;
+
+while (array[index]>=10 && array[index]<=99)
+{
+     Console.WriteLine(index);
+     Console.WriteLine(array[index]);
+     count++;
+     index++; 
+     
+} */
+
+
+//Найти сумму чисел одномерного массива стоящих на нечетной позиции
+
+/* int getRandom()
+{
+    return new Random().Next(1,10);
+}
+int[] array=new int[5];
+int index=0;
+int count=0;
+while (index<5)
+{
+     array[index]=getRandom();
+    index++; 
+}
+index=0;
+
+while (index<5)
+{
+     Console.WriteLine(array[index]);
+     index++;
+} 
+Console.WriteLine();
+index=0;
+
+while (index<5)
+{
+     if (index%2==0)
+     {   
+         count=count+array[index];
+     }
+     index++;
+} 
+Console.WriteLine(count); */
+
+//Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+
+/* int getRandom()
+{
+    return new Random().Next(1, 10);
+}
+ int[] array= new int[10];
+ int length= array.Length;
+ int index = 0;
+ int res=0;
+ while (index<10)
+ {
+      array[index]=getRandom();
+      index++;
+ }
+ index=0;
+
+ while (index<10)
+{
+     Console.WriteLine(array[index]);
+     index++;
+}
+index=0;
+Console.WriteLine();
+
+ while (index<10/2)
+ {
+      res=array[index] * array[9-(index)];
+      Console.WriteLine(res);
+      index++;
+ }
+  */
+//В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
+
+/* double A()
+{
+    return new Random().Next(-100, 100)/10.0;
+}
+double[] array= new double[10];
+int index=0;
+while (index<10)
+{
+     array[index]=A();
+     index++;
+}
+index=0;
+while (index<10)
+{
+     Console.WriteLine(array[index]);
+     index++;
+}
+index=0;
+Console.WriteLine();
+double maxvalue=array[0];
+double minvalue=array[0];
+while (index<10)
+{   
+    if (array[index]>maxvalue)
+    {
+        maxvalue=array[index];
+    }
+    if (array[index]<minvalue)
+    {
+        minvalue=array[index];
+    }
+     
+     index++;
+}
+
+Console.WriteLine(maxvalue);
+Console.WriteLine(minvalue);
+Console.WriteLine();
+Console.WriteLine($"Разница между максимальным и минимальным элементом = {maxvalue-minvalue}"); */
+
+
+//В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом и индексом
+
+/* 
+double A()
+{
+    return new Random().Next(-100, 100)/10.0;
+}
+double[] array= new double[10];
+int index=0;
+while (index<10)
+{
+     array[index]=A();
+     index++;
+}
+index=0;
+while (index<10)
+{
+     Console.WriteLine(array[index]);
+     index++;
+}
+index=0;
+Console.WriteLine();
+double maxvalue=array[0];
+double minvalue=array[0];
+double countmax=0;
+double countmin=0;
+while (index<10)
+{   
+    if (array[index]>maxvalue)
+    {
+        maxvalue=array[index];
+        countmax=index;
+    }
+    if (array[index]<minvalue)
+    {
+        minvalue=array[index];
+        countmin=index;
+    }
+     
+     index++;
+}
+
+Console.WriteLine(maxvalue);
+Console.WriteLine(minvalue);
+Console.WriteLine();
+Console.WriteLine(countmax);
+Console.WriteLine(countmin);
+Console.WriteLine();
+Console.WriteLine($"Разница между максимальным и минимальным элементом = {maxvalue-minvalue}");
+Console.WriteLine();
+Console.WriteLine($"Разница между максимальным и минимальным элементом индекса = {Math.Abs(countmax-countmin)}"); */
+
+
+/* Почувствуй себя лидом
+41. Выяснить являются ли три числа сторонами треугольника 
+42. Определить сколько чисел больше 0 введено с клавиатуры
+43. Написать программу преобразования десятичного числа в двоичное
+44. Найти точку пересечения двух прямых заданных уравнением y=kx+b, а1 k1 и а2 и k2 заданы
+45. Показать числа Фибоначчи
+46. Написать программу масштабирования фигуры
+47. Написать программу копирования массива */
+
+
+//41. Выяснить являются ли три числа сторонами треугольника 
+
+/* string met (int a, int b, int c)
+{
+    string res= string.Empty;
+    if (a+b>c&&b+c>a&&c+a>b)
+    {
+        res=res+($"Данные числа являются сторонами треугольника");
+        
+    }
+    else
+    {
+        res=res+($"Данные числа НЕ являются сторонами треугольника");
+    }
+    return res;
+}
+string A = met(4,5,10);
+Console.WriteLine(A); */
+
+//42. Определить сколько чисел больше 0 введено с клавиатуры
+
+
+/* int A()
+{
+    return int.Parse(Console.ReadLine());
+}
+int[] array= new int[10];
+int index=0;
+while (index<10)
+{
+    Console.WriteLine("Введите число");
+     array[index]=A();
+     index++;
+}
+index=0;
+Console.WriteLine();
+while (index<10)
+{
+     Console.WriteLine(array[index]);
+     index++;
+}
+index=0;
+int count=0;
+Console.WriteLine();
+while (index<10)
+{        
+    if (array[index]>0)
+    {
+        count++;
+    }
+index++;
+}
+Console.WriteLine($"Количество введеных чисел с клавиатуры, которые больше 0 = {count}"); */
+
+//Написать программу преобразования десятичного числа в двоичное
+
+/* Console.WriteLine("Введите число");
+int N = int.Parse(Console.ReadLine()); */
+
+/* string met (int N)
+{
+    string res=string.Empty;
+    while ((N+1)/2>=1)
+    {
+        res+= " "+N%2;
+        N=N/2;
+    }
+return res;
+}
+string total= met(4);
+Console.WriteLine();
+Console.WriteLine(total); */
+
+//44. Найти точку пересечения двух прямых заданных уравнением y=kx+b, b1 k1 и b2 и k2 заданы
+
+/* string method (double k1, double b1, double k2, double b2)
+{
+    string resy=string.Empty;
+    double resx=0;
+    double resb=0;
+    resx= k1-k2;
+    resb= b2-b1;
+    resy= $"Значение Y={k1*(resb/resx)+b1}, Значение Х={resb/resx} ";
+    if (k1==k2)
+    {
+        resy="Прямые параллельны ";
+    }
+return resy;
+}
+string A= method(1, -4, 3 , 2);
+Console.WriteLine(A); */
+
+//Показать числа Фибоначчи
+
+/* string Fibonacci (int N)
+{
+    string res= string.Empty;
+    int a=0;
+    int b=1;
+    int temp=0;
+    int count=0;
+    while (count<N)
+    {
+      res+= $"{a+b}, ";
+      temp= a+b;
+      a=b;
+      b=temp;
+      count++;
+    }
+return res;
+}
+
+string Print = Fibonacci(10);
+Console.WriteLine(Print); */
+
+
+///  Написать программу масштабирования фигуры
+
+/* string mass( double x1, double y1, double  B1x2, double  y2, double x3, double y3, double x4, double y4, double zoom)//добавить стринг для вывода картинки
+{
+    string res= string.Empty;
+    if (x1-B1x2!=0&&B1x2-x3!=0&&x3-x4!=0&&x4-x1!=0&&y1-y2!=0&&y2-y3!=0&&y3-y4!=0&&y4-y1!=0)
+    {   
+        Console.SetCursorPosition(x1, y1); 
+        double x12 = (Math.Abs(B1x2-x1)/zoom);
+        double y12 = (Math.Abs(y2-y1)/zoom);
+        double x23 = (Math.Abs(x3-B1x2))/zoom;
+        double y23 = (Math.Abs(y3-y2))/zoom;
+        double x34 = (Math.Abs(x4-x3))/zoom;
+        double y34 = (Math.Abs(y4-y3))/zoom;
+        double x41 = (Math.Abs(x1-x4))/zoom;
+        double y41 = (Math.Abs(y1-y4))/zoom;
+        res= $"{(x12 , y12)}, {(x23, y23)}, {(x34,y34)}, {(x41,y41)}";
+         Console.SetCursorPosition(x1, y1); 
+    }
+    return res;
+}
+ string Print = mass (1, 2, 4, 5 ,2 ,1, 6, 4 , (0.5));
+ Console.WriteLine (Print);
+ Console.WriteLine(); */
+
+ int x1=1; int y1=20; int x2= 20; int y2= 20; int x3= 10; int y3=1;
+ Double zoom = 0.25;
+int mInt = (int)zoom;
+Console.WriteLine(mInt);
+
+    /* Console.SetCursorPosition(x1, y1); 
+    Console.WriteLine("+");
+    Console.SetCursorPosition(x2, y2);
+    Console.WriteLine("+");
+    Console.SetCursorPosition(x3, y3);
+    Console.WriteLine("+");
+
+    Console.SetCursorPosition(x1*zoom, y1*zoom); 
+    Console.WriteLine("!");
+    Console.SetCursorPosition(x2*zoom, y2*zoom);
+    Console.WriteLine("!");
+    Console.SetCursorPosition(x3*zoom, y3*zoom);
+    Console.WriteLine("!"); */
+
+/* string[,] table = new string [2,5];
+// string.Empty
+//  table[0.0] table[0.1] ... table[0.4]
+//  table[1.0]  table[1.1]...  table[1.4]
+table[1, 2]= "слово";
+
+for (int rows = 0; rows < 2; rows++)
+{
+    for (int columns = 0; columns < 5; columns++)
+    {
+        Console.WriteLine($"-{table[rows, columns]}-");
+    }
+} */
+
+
+
+/* void PrintArray(int[,] matr)
+{
+for (int i = 0; i < matr.GetLength(0); i++)
+{
+    for (int j = 0; j < matr.GetLength(1); j++)
+    {
+        Console.Write($"{matr[i , j]}");
+    }
+   Console.WriteLine(); 
+}
+}
+void FillArray(int[,] matr)
+{
+  for (int i = 0; i < matr.GetLength(0); i++)
+  {
+      for (int j = 0; j < matr.GetLength(1); j++)
+      {
+          matr[i,j] = new Random().Next(1, 10);
+      }
+      
+  }
+
+}
+int[,] matrix = new int [3, 4];
+PrintArray(matrix);
+FillArray(matrix);
+Console.WriteLine();
+PrintArray(matrix); */
+
+
+/* int[,] matrix = new int[,]
+{
+{0, 1 , 0 , 0, 1
+, 0, 1, 0, 1
+}
+}; */
+/* int[,] matrix = new int[,]
+{
+{ 0, 1, 0, 0, 1},
+{ 0, 1, 0, 1, 1}
+};
+void PrintImage(int[,] image)
+{
+for (int i = 0; i < image.GetLength(0); i++)
+{
+    for (int j = 0; j < image.GetLength(1); j++)
+    {
+        /* Console.Write($"{matr[i , j]}"); */
+        /* if (image[i, j]==0) Console.Write("  ");
+        else
+        {
+            Console.Write(" + ");
+        }
+    }
+   Console.WriteLine(); 
+}
+}
+
+void FillImage(int row, int columns)
+{
+ if(matrix[row, columns]==0)
+     {
+         matrix[row, columns]=1;
+        FillImage(row-1, columns);
+        FillImage(row, columns-1);
+        FillImage(row+1, columns);
+        FillImage(row, columns+1);
+     } 
+
+}
+
+
+
+PrintImage(matrix);
+FillImage(0,0);
+Console.WriteLine();
+PrintImage(matrix) */
+
+/* int Factorial(int n)
+{
+    if (n==1) return 1;
+    else return n*Factorial(n-1);
+}
+Console.WriteLine(Factorial(3));
+ */
+
+/* int Fibonacci(int n)
+{
+    if (n==1||n==2) return 1;
+    else return Fibonacci(n-1)+ Fibonacci(n-2);
+}
+
+for (int i = 1; i < 10; i++)
+{
+    Console.WriteLine(Fibonacci(i));
+} */
+
+
+//Повтор
+/* void PrintArray(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write(($"{matrix[i, j]}"));
+        }
+        Console.WriteLine();
+    }
+}
+void FillArray(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(1, 10); 
+        }
+    }
+}
+int[,] matrix = new int [3,4];
+PrintArray(matrix);
+FillArray(matrix);
+Console.WriteLine();
+PrintArray(matrix);
+ */
+
+/*  void PrintArray(int[] matrix)
+{
+    for (int i = 0; i < matrix.Length; i++)
+    {
+            Console.Write(matrix[i]);
+    }
+}
+void FillArray(int[] matrix)
+{
+    for (int i = 0; i < matrix.Length; i++)
+    {
+        
+         matrix[i]= new Random().Next(1, 10); 
+    }
+}
+int[] matrix = new int [10];
+PrintArray(matrix);
+Console.WriteLine();
+FillArray(matrix);
+PrintArray(matrix); */
+
+//Факториал через рекурсию повтор
+
+/* int Factorial ( int n)
+{
+    if (n==1) return 1;
+    else return n*Factorial(n-1);
+}
+Console.WriteLine(Factorial(5)); */
